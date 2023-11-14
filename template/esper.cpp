@@ -1,4 +1,4 @@
-pair<long long, long long> rat_convert(long long x, long long m, long long d = 1000){
+pair<long long, long long> rational_convert(long long x, long long m, long long d = 1000){
   long long n = m / (2 * d);
   pair<long long, long long> u = make_pair(m, 0);
   pair<long long, long long> v = make_pair(x, 1);
