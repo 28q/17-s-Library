@@ -47,3 +47,37 @@ struct DLP{
     return -1;
   }
 };
+/*verify
+struct S{
+  long long a;
+  long long b;
+};
+using T = long long;
+long long p;
+S op(S x, S y){
+  S ret;
+  ret.a = x.a*y.a%p;
+  ret.b = (x.b*y.a+y.b)%p;
+  return ret;
+}
+T apply(S x, T y){
+  return (y*x.a+x.b)%p;
+}
+S e(){
+  S ret;
+  ret.a = 1;
+  ret.b = 0;
+  return ret;
+}
+int main(){
+  int t;
+  cin >> t;
+  while(t--){
+    long long a, b, s, g;
+    cin >> p >> a >> b >> s >> g;
+    S f(a, b);
+    DLP<S, T> d(f, p, s, g);
+    cout << d.solve<op, apply, e>() << endl;
+  }
+}
+*/
