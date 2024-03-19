@@ -314,10 +314,8 @@ namespace math{
   };
   template <int id> barrett dynamic_modint<id>::bt(998244353);
   using modint = dynamic_modint<-1>;
-  /*
   using modint998244353 = static_modint<998244353>;
   using modint1000000007 = static_modint<1000000007>;
   using modint1000000009 = static_modint<1000000009>;
-  */
   #pragma GCC diagnostic pop
 };using namespace math;
