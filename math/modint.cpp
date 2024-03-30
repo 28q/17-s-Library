@@ -133,7 +133,7 @@ namespace math{
       return *this;
     }
     mint& operator-=(const mint& rhs){
-      _v += mod()-rhs._v;
+      _v -= rhs._v;
       if (_v >= umod()) _v += umod();
       return *this;
     }
@@ -264,7 +264,7 @@ namespace math{
     }
     mint& operator-=(const mint& rhs){
       _v += mod()-rhs._v;
-      if(_v >= umod()) _v += umod();
+      if(_v >= umod()) _v -= umod();
       return *this;
     }
     mint& operator*=(const mint& rhs){
