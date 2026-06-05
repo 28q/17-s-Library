@@ -2,7 +2,7 @@ struct MaxSubseqHull{
   struct Point{
     long long x,y;
   };
-  MaxSubseqHull(vector<int> a):a(a){
+  MaxSubseqHull(vector<long long> a):a(a){
     int n = a.size();
     hull = solve(0, n);
   }
@@ -118,6 +118,6 @@ struct MaxSubseqHull{
   }
   private:
   int n;
-  vector<int> a;
+  vector<long long> a;
   vector<Point> hull;
 };
